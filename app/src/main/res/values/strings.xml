@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">Assesment1</string>
+    <string name="app_name">Split Bill Here!!</string>
+    <string name="hari_tanggal">Hari dan Tanggal</string>
+    <string name="tempat">Tempat</string>
+    <string name="total">Total Pengeluaran</string>
+    <string name="aktivitas">Aktivitas Hari ini</string>
+    <string name="hasil">Hasil</string>
+    <string name="yang_bayar">Siapa saja yang bayar?</string>
+    <string name="wafiq">Wafiq</string>
+    <string name="zhafira">Zhafira</string>
+    <string name="bunga">Bunga</string>
+    <string name="bayar">Yang bayar</string>
+    <string name="rekap_hasil">Hasil Rekapan Hari Ini</string>
+    <string name="output_tempat">Nama Tempat:</string>
+    <string name="output_total">Total Pengeluaran:</string>
+    <string name="output_hariTanggal">Hari dan Tanggal:</string>
 </resources>
