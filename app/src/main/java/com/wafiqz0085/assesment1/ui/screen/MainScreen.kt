@@ -14,6 +14,7 @@ import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -65,22 +66,22 @@ fun ScreenContent(modifier: Modifier = Modifier) {
     val calendar = Calendar.getInstance()
     val dateFormat = SimpleDateFormat("EEEE, dd MMMM yyyy")
 
-    var hariTanggal by remember { mutableStateOf("") }
-    var hariTanggalError by remember { mutableStateOf(false) }
+    var hariTanggal by rememberSaveable { mutableStateOf("") }
+    var hariTanggalError by rememberSaveable { mutableStateOf(false) }
 
-    var namaTempat by remember { mutableStateOf("") }
-    var namaTempatError by remember { mutableStateOf(false) }
+    var namaTempat by rememberSaveable { mutableStateOf("") }
+    var namaTempatError by rememberSaveable { mutableStateOf(false) }
 
-    var totalHarga by remember { mutableStateOf("") }
-    var totalHargaError by remember { mutableStateOf(false) }
+    var totalHarga by rememberSaveable { mutableStateOf("") }
+    var totalHargaError by rememberSaveable { mutableStateOf(false) }
 
-    var checkBoxError by remember { mutableStateOf(false) }
+    var checkBoxError by rememberSaveable { mutableStateOf(false) }
 
-    var wafiqChecked by remember { mutableStateOf(false) }
-    var zhafiraChecked by remember { mutableStateOf(false) }
-    var bungaChecked by remember { mutableStateOf(false) }
+    var wafiqChecked by rememberSaveable { mutableStateOf(false) }
+    var zhafiraChecked by rememberSaveable { mutableStateOf(false) }
+    var bungaChecked by rememberSaveable { mutableStateOf(false) }
 
-    var showResult by remember { mutableStateOf(false) }
+    var showResult by rememberSaveable { mutableStateOf(false) }
 
     val scrollState = rememberScrollState()
 
