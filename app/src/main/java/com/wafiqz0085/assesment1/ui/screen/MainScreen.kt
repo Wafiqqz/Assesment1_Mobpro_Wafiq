@@ -9,6 +9,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -39,7 +40,11 @@ fun MainScreen() {
             )
         }
     ) { innerPadding ->
-        ScreenContent(modifier = Modifier.padding(innerPadding))
+        ScreenContent(
+            modifier = Modifier
+                .padding(innerPadding)
+                .fillMaxSize()
+        )
     }
 }
 
@@ -82,7 +87,6 @@ fun ScreenContent(modifier: Modifier = Modifier) {
 
     Column(
         modifier = modifier
-            .fillMaxSize()
             .verticalScroll(scrollState)
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)
@@ -149,11 +153,11 @@ fun ScreenContent(modifier: Modifier = Modifier) {
             }
         }
 
-        if (checkBoxError){
-            Row (
+        if (checkBoxError) {
+            Row(
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.padding(top = 4.dp)
-            ){
+            ) {
                 IconPicker(true, modifier = Modifier.padding(end = 8.dp))
                 Text(
                     text = stringResource(R.string.checkbox_error),
@@ -168,7 +172,7 @@ fun ScreenContent(modifier: Modifier = Modifier) {
                 hariTanggalError = hariTanggal.isBlank()
                 namaTempatError = namaTempat.isBlank()
                 totalHargaError = totalHarga.isBlank()
-                checkBoxError = !(wafiqChecked|| zhafiraChecked || bungaChecked)
+                checkBoxError = !(wafiqChecked || zhafiraChecked || bungaChecked)
 
                 showResult = !(hariTanggalError || namaTempatError || totalHargaError || checkBoxError)
             },
@@ -203,18 +207,41 @@ fun ScreenContent(modifier: Modifier = Modifier) {
             } else {
                 Text(stringResource(R.string.bayar) + ": -")
             }
+
+            OutlinedButton(
+                onClick = {
+                    hariTanggal = ""
+                    namaTempat = ""
+                    totalHarga = ""
+                    wafiqChecked = false
+                    zhafiraChecked = false
+                    bungaChecked = false
+                    showResult = false
+                    hariTanggalError = false
+                    namaTempatError = false
+                    totalHargaError = false
+                    checkBoxError = false
+                },
+                modifier = Modifier
+                    .align(Alignment.CenterHorizontally)
+                    .padding(top = 12.dp)
+            ) {
+                Icon(Icons.Default.Refresh, contentDescription = "Reset", modifier = Modifier.padding(end = 8.dp))
+                Text("Reset")
+            }
         }
     }
 }
 
-
 @Composable
 fun IconPicker(isError: Boolean, modifier: Modifier = Modifier) {
     if (isError) {
-        Icon(imageVector = Icons.Filled.Warning,
-             contentDescription = "Input Error",
-             tint = MaterialTheme.colorScheme.error,
-             modifier = modifier)
+        Icon(
+            imageVector = Icons.Filled.Warning,
+            contentDescription = "Input Error",
+            tint = MaterialTheme.colorScheme.error,
+            modifier = modifier
+        )
     }
 }
 
