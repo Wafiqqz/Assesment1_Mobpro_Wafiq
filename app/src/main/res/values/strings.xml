@@ -14,4 +14,7 @@
     <string name="output_tempat">Nama Tempat:</string>
     <string name="output_total">Total Pengeluaran:</string>
     <string name="output_hariTanggal">Hari dan Tanggal:</string>
+    <string name="input_invalid">Inputan tidak boleh kosong!</string>
+    <string name="hitung">Hitung</string>
+    <string name="checkbox_error">Pilih setidaknya salah satu</string>
 </resources>
