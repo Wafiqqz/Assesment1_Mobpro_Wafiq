@@ -4,6 +4,7 @@
     import androidx.activity.ComponentActivity
     import androidx.activity.compose.setContent
     import androidx.activity.enableEdgeToEdge
+    import com.wafiqz0085.assesment1.navigation.SetupNavGraph
     import com.wafiqz0085.assesment1.ui.screen.MainScreen
     import com.wafiqz0085.assesment1.ui.theme.Assesment1Theme
 
@@ -13,7 +14,7 @@
             enableEdgeToEdge()
             setContent {
                 Assesment1Theme {
-                    MainScreen()
+                    SetupNavGraph()
                 }
             }
         }
