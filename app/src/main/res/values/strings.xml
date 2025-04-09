@@ -17,4 +17,6 @@
     <string name="input_invalid">Inputan tidak boleh kosong!</string>
     <string name="hitung">Hitung</string>
     <string name="checkbox_error">Pilih setidaknya salah satu</string>
+    <string name="tentang_aplikasi">Tentang Aplikasi</string>
+    <string name="deskripsi">Deskripsi Aplikasi</string>
 </resources>
