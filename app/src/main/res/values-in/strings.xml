@@ -13,11 +13,12 @@
     <string name="hitung">Hitung</string>
     <string name="checkbox_error">Pilih setidaknya salah satu</string>
     <string name="tentang_aplikasi">Tentang Aplikasi</string>
-    <string name="deskripsi">Bayar Oi adalah sebuah aplikasi yang lahir dari keresahan seorang teman ketika bepergian bersama teman–temannya.\nDalam setiap perjalanan, sering kali satu orang harus terlebih dahulu membayar seluruh biaya karena alasan kepraktisan.\nNamun, karena sifat mereka yang cenderung pelupa, pembayaran yang seharusnya dilakukan belakangan sering kali terlupakan.\nUntuk mengatasi masalah tersebut, terciptalah Bayar Oi—sebuah aplikasi yang dirancang untuk mencatat setiap kegiatan dan pengeluaran bersama, sehingga pembayaran bisa lebih tertata dan adil bagi semua pihak.\n\nCopyright © 2024-2025 Wafiq Tafazzul Hilmi.</string>
+    <string name="deskripsi">Bayar Oi adalah sebuah aplikasi yang lahir dari keresahan seorang teman ketika bepergian bersama teman–temannya.\nDalam setiap perjalanan, sering kali satu orang harus terlebih dahulu membayar seluruh biaya karena alasan kepraktisan.\nNamun, karena sifat mereka yang cenderung pelupa, pembayaran yang seharusnya dilakukan belakangan sering kali terlupakan.\nUntuk mengatasi masalah tersebut, terciptalah Bayar Oi—sebuah aplikasi yang dirancang untuk mencatat setiap kegiatan dan pengeluaran bersama, sehingga pembayaran bisa lebih tertata dan adil bagi semua pihak.\n\nCopyright © 2024–2025 Wafiq Tafazzul Hilmi.</string>
     <string name="kembali">Kembali</string>
     <string name="bagikan">Bagikan</string>
     <string name="reset">Reset</string>
     <string name="yang_bayar">Siapa saja yang bayar?</string>
     <string name="bayar">Yang bayar</string>
-    <string name="bagikan_template">Rekap Hasil Hari/Tanggal: %1$s Tempat: %2$s Total: Rp %3$s  %4$s</string>
+    <string name="bagikan_template">Rekap Hasil Hari\nTanggal: %1$s\nTempat: %2$s\nTotal: Rp %3$s \n\n%4$s</string>
+    <string name="bayar_per_orang">%1$s bayar Rp %2$d</string>
 </resources>

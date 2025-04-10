@@ -62,7 +62,7 @@ fun MainScreen(navController: NavHostController) {
     }
 }
 
-@SuppressLint("SimpleDateFormat")
+@SuppressLint("SimpleDateFormat", "StringFormatInvalid")
 @Composable
 fun ScreenContent(modifier: Modifier = Modifier) {
     val context = LocalContext.current
@@ -206,21 +206,28 @@ fun ScreenContent(modifier: Modifier = Modifier) {
             Text("${stringResource(R.string.output_total)} Rp $totalHarga")
 
             val selectedNames = listOfNotNull(
-                if (diraChecked) stringResource(R.string.dira) else null,
-                if (radiChecked) stringResource(R.string.radi) else null,
-                if (iradChecked) stringResource(R.string.irad) else null
+                if (diraChecked) context.getString(R.string.dira) else null,
+                if (radiChecked) context.getString(R.string.radi) else null,
+                if (iradChecked) context.getString(R.string.irad) else null
             )
 
             val jumlahOrang = selectedNames.size
-            val hargaPerOrang = if (jumlahOrang > 0) totalHarga.toIntOrNull()?.div(jumlahOrang) else null
+            val hargaPerOrang = totalHarga.toIntOrNull()?.div(jumlahOrang).takeIf { jumlahOrang > 0 }
 
-            val bayarList = if (selectedNames.isNotEmpty() && hargaPerOrang != null) {
-                selectedNames.joinToString("\n") { "$it bayar: Rp $hargaPerOrang" }.also {
-                    selectedNames.forEach { nama -> Text("$nama bayar: Rp $hargaPerOrang") }
+            if (selectedNames.isNotEmpty() && hargaPerOrang != null) {
+                selectedNames.forEach { nama ->
+                    Text(text = stringResource(R.string.bayar_per_orang, nama, hargaPerOrang))
                 }
             } else {
-                Text(stringResource(R.string.bayar) + ": -")
-                ""
+                Text(text = stringResource(R.string.bayar) + ": -")
+            }
+
+            val bayarList = if (selectedNames.isNotEmpty() && hargaPerOrang != null) {
+                selectedNames.joinToString("\n") {
+                    context.getString(R.string.bayar_per_orang, it, hargaPerOrang)
+                }
+            } else {
+                context.getString(R.string.bayar) + ": -"
             }
 
             Row(

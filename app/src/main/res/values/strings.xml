@@ -18,9 +18,10 @@
     <string name="hitung">Count</string>
     <string name="checkbox_error">Select at least one of</string>
     <string name="tentang_aplikasi">About Application</string>
-    <string name="deskripsi">Bayar Oi is an app that was born out of a friend\'s concerns when traveling with his friends.\nIn every trip, it is often the case that one person has to pay for the entire cost first for reasons of practicality.\nHowever, due to their forgetful nature, payments that should be made later are often forgotten.\nTo solve this problem, Bayar Oi was created–an app designed to record every activity and expense together, so that payments can be more organized and fair for all parties.\n\nCopyright © 2024-2025 Wafiq Tafazzul Hilmi.</string>
+    <string name="deskripsi">Bayar Oi is an app that was born out of a friend\'s concerns when traveling with his friends.\nIn every trip, it is often the case that one person has to pay for the entire cost first for reasons of practicality.\nHowever, due to their forgetful nature, payments that should be made later are often forgotten.\nTo solve this problem, Bayar Oi was created–an app designed to record every activity and expense together, so that payments can be more organized and fair for all parties.\n\nCopyright © 2024–2025 Wafiq Tafazzul Hilmi.</string>
     <string name="kembali">Back</string>
     <string name="bagikan">Share</string>
     <string name="reset">Reset</string>
-    <string name="bagikan_template">Recap Results Day/Date: %1$s Place: %2$s Total: Rp %3$s %4$s</string>
+    <string name="bagikan_template">Recap Results Day\nDate: %1$s\nPlace: %2$s\nTotal: Rp %3$s\n\nzz%4$s</string>
+    <string name="bayar_per_orang">%1$s paid Rp %2$d</string>
 </resources>
