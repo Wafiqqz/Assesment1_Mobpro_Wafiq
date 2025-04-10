@@ -22,5 +22,6 @@
     <string name="kembali">Back</string>
     <string name="bagikan">Share</string>
     <string name="reset">Reset</string>
-    <string name="bagikan_template">Recap Results Day/Date: %1$s Place: %2$s Total: Rp %3$s %4$s</string>
+    <string name="bagikan_template">Recap Results Day\nDate: %1$s\nPlace: %2$s\nTotal: Rp %3$s\n%4$s</string>
+    <string name="bayar_per_orang">%1$s paid Rp %2$d</string>
 </resources>

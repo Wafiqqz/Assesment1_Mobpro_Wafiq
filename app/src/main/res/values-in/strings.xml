@@ -20,4 +20,5 @@
     <string name="yang_bayar">Siapa saja yang bayar?</string>
     <string name="bayar">Yang bayar</string>
     <string name="bagikan_template">Rekap Hasil Hari/Tanggal: %1$s Tempat: %2$s Total: Rp %3$s  %4$s</string>
+    <string name="bayar_per_orang">%1$s bayar Rp %2$d</string>
 </resources>
