@@ -17,7 +17,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.wafiqz0085.assesment1.R
@@ -30,7 +29,7 @@ fun AboutScreen(navController: NavHostController) {
         topBar = {
             TopAppBar(
                 navigationIcon = {
-                    IconButton(onClick = {navController.popBackStack()}) {
+                    IconButton(onClick = {navController.navigateUp()}) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(R.string.kembali),

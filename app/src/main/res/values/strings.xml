@@ -1,23 +1,26 @@
 <resources>
-    <string name="app_name">Split Bill Here!!</string>
-    <string name="hari_tanggal">Hari dan Tanggal</string>
-    <string name="tempat">Tempat</string>
-    <string name="total">Total Pengeluaran</string>
-    <string name="aktivitas">Aktivitas Hari ini</string>
-    <string name="hasil">Hasil</string>
-    <string name="yang_bayar">Siapa saja yang bayar?</string>
-    <string name="wafiq">Wafiq</string>
-    <string name="zhafira">Zhafira</string>
-    <string name="bunga">Bunga</string>
-    <string name="bayar">Yang bayar</string>
-    <string name="rekap_hasil">Hasil Rekapan Hari Ini</string>
-    <string name="output_tempat">Nama Tempat:</string>
-    <string name="output_total">Total Pengeluaran:</string>
-    <string name="output_hariTanggal">Hari dan Tanggal:</string>
-    <string name="input_invalid">Inputan tidak boleh kosong!</string>
-    <string name="hitung">Hitung</string>
-    <string name="checkbox_error">Pilih setidaknya salah satu</string>
-    <string name="tentang_aplikasi">Tentang Aplikasi</string>
-    <string name="deskripsi">Deskripsi Aplikasi</string>
-    <string name="kembali">Kembali</string>
+    <string name="app_name" translatable="false">Bayar Oi</string>
+    <string name="hari_tanggal">Date and Day</string>
+    <string name="tempat">Place</string>
+    <string name="total">Total Expenses</string>
+    <string name="aktivitas">Today\'s Activity</string>
+    <string name="hasil">Result</string>
+    <string name="yang_bayar">Who pays?</string>
+    <string name="wafiq" translatable="false">Wafiq</string>
+    <string name="zhafira" translatable="false">Zhafira</string>
+    <string name="bunga" translatable="false">Bunga</string>
+    <string name="bayar">The payer is</string>
+    <string name="rekap_hasil">Today\'s Activity Recap Results</string>
+    <string name="output_tempat">Place\'s name:</string>
+    <string name="output_total">"Total Expenses: "</string>
+    <string name="output_hariTanggal">"Date and Day: "</string>
+    <string name="input_invalid">Input cannot be empty!</string>
+    <string name="hitung">Count</string>
+    <string name="checkbox_error">Select at least one of</string>
+    <string name="tentang_aplikasi">About Application</string>
+    <string name="deskripsi">Bayar Oi is an app that was born out of a friend\'s concerns when traveling with his friends.\nIn every trip, it is often the case that one person has to pay for the entire cost first for reasons of practicality.\nHowever, due to their forgetful nature, payments that should be made later are often forgotten.\nTo solve this problem, Bayar Oi was created–an app designed to record every activity and expense together, so that payments can be more organized and fair for all parties.\n\nCopyright © 2024-2025 Wafiq Tafazzul Hilmi.</string>
+    <string name="kembali">Back</string>
+    <string name="bagikan">Share</string>
+    <string name="reset">Reset</string>
+    <string name="bagikan_template">Recap Results Day/Date: %1$s Place: %2$s Total: Rp %3$s %4$s</string>
 </resources>

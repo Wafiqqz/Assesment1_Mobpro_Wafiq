@@ -2,6 +2,8 @@ package com.wafiqz0085.assesment1.ui.screen
 
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
+import android.content.Context
+import android.content.Intent
 import android.content.res.Configuration
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -10,6 +12,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.*
@@ -211,34 +214,55 @@ fun ScreenContent(modifier: Modifier = Modifier) {
             val jumlahOrang = selectedNames.size
             val hargaPerOrang = if (jumlahOrang > 0) totalHarga.toIntOrNull()?.div(jumlahOrang) else null
 
-            if (selectedNames.isNotEmpty() && hargaPerOrang != null) {
-                selectedNames.forEach { nama ->
-                    Text("$nama bayar: Rp $hargaPerOrang")
+            val bayarList = if (selectedNames.isNotEmpty() && hargaPerOrang != null) {
+                selectedNames.joinToString("\n") { "$it bayar: Rp $hargaPerOrang" }.also {
+                    selectedNames.forEach { nama -> Text("$nama bayar: Rp $hargaPerOrang") }
                 }
             } else {
                 Text(stringResource(R.string.bayar) + ": -")
+                ""
             }
 
-            OutlinedButton(
-                onClick = {
-                    hariTanggal = ""
-                    namaTempat = ""
-                    totalHarga = ""
-                    wafiqChecked = false
-                    zhafiraChecked = false
-                    bungaChecked = false
-                    showResult = false
-                    hariTanggalError = false
-                    namaTempatError = false
-                    totalHargaError = false
-                    checkBoxError = false
-                },
+            Row(
                 modifier = Modifier
-                    .align(Alignment.CenterHorizontally)
-                    .padding(top = 12.dp)
+                    .fillMaxWidth()
+                    .padding(top = 12.dp),
+                horizontalArrangement = Arrangement.SpaceEvenly
             ) {
-                Icon(Icons.Default.Refresh, contentDescription = "Reset", modifier = Modifier.padding(end = 8.dp))
-                Text("Reset")
+                OutlinedButton(
+                    onClick = {
+                        hariTanggal = ""
+                        namaTempat = ""
+                        totalHarga = ""
+                        wafiqChecked = false
+                        zhafiraChecked = false
+                        bungaChecked = false
+                        showResult = false
+                        hariTanggalError = false
+                        namaTempatError = false
+                        totalHargaError = false
+                        checkBoxError = false
+                    }
+                ) {
+                    Icon(Icons.Default.Refresh, contentDescription = "Reset", modifier = Modifier.padding(end = 8.dp))
+                    Text(text = stringResource(R.string.reset))
+                }
+
+                OutlinedButton(
+                    onClick = {
+                        val message = context.getString(
+                            R.string.bagikan_template,
+                            hariTanggal,
+                            namaTempat,
+                            totalHarga,
+                            bayarList
+                        )
+                        shareDate(context, message)
+                    }
+                ) {
+                    Icon(Icons.Default.Share, contentDescription = "Bagikan", modifier = Modifier.padding(end = 8.dp))
+                    Text(text = stringResource(R.string.bagikan))
+                }
             }
         }
     }
@@ -260,6 +284,17 @@ fun IconPicker(isError: Boolean, modifier: Modifier = Modifier) {
 fun ErrorHint(isError: Boolean) {
     if (isError) {
         Text(text = stringResource(R.string.input_invalid))
+    }
+}
+
+@SuppressLint("QueryPermissionsNeeded")
+private fun shareDate(context: Context, message: String) {
+    val shareIntent = Intent(Intent.ACTION_SEND).apply {
+        type = "text/plain"
+        putExtra(Intent.EXTRA_TEXT,message)
+    }
+    if (shareIntent.resolveActivity(context.packageManager) != null) {
+        context.startActivity(shareIntent)
     }
 }
 

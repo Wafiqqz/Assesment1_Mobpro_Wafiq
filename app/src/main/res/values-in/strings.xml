@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hari_tanggal">Hari dan Tanggal</string>
+    <string name="tempat">Tempat</string>
+    <string name="total">Total Pengeluaran</string>
+    <string name="aktivitas">Aktivitas Hari ini</string>
+    <string name="hasil">Hasil</string>
+    <string name="rekap_hasil">Hasil Rekapan Aktivitas Hari Ini</string>
+    <string name="output_tempat">Nama Tempat:</string>
+    <string name="output_total">Total Pengeluaran:</string>
+    <string name="output_hariTanggal">Hari dan Tanggal:</string>
+    <string name="input_invalid">Inputan tidak boleh kosong!</string>
+    <string name="hitung">Hitung</string>
+    <string name="checkbox_error">Pilih setidaknya salah satu</string>
+    <string name="tentang_aplikasi">Tentang Aplikasi</string>
+    <string name="deskripsi">Bayar Oi adalah sebuah aplikasi yang lahir dari keresahan seorang teman ketika bepergian bersama teman–temannya.\nDalam setiap perjalanan, sering kali satu orang harus terlebih dahulu membayar seluruh biaya karena alasan kepraktisan.\nNamun, karena sifat mereka yang cenderung pelupa, pembayaran yang seharusnya dilakukan belakangan sering kali terlupakan.\nUntuk mengatasi masalah tersebut, terciptalah Bayar Oi—sebuah aplikasi yang dirancang untuk mencatat setiap kegiatan dan pengeluaran bersama, sehingga pembayaran bisa lebih tertata dan adil bagi semua pihak.\n\nCopyright © 2024-2025 Wafiq Tafazzul Hilmi.</string>
+    <string name="kembali">Kembali</string>
+    <string name="bagikan">Bagikan</string>
+    <string name="reset">Reset</string>
+    <string name="yang_bayar">Siapa saja yang bayar?</string>
+    <string name="bayar">Yang bayar</string>
+    <string name="bagikan_template">Rekap Hasil Hari/Tanggal: %1$s Tempat: %2$s Total: Rp %3$s  %4$s</string>
+</resources>
