@@ -80,9 +80,9 @@ fun ScreenContent(modifier: Modifier = Modifier) {
 
     var checkBoxError by rememberSaveable { mutableStateOf(false) }
 
-    var wafiqChecked by rememberSaveable { mutableStateOf(false) }
-    var zhafiraChecked by rememberSaveable { mutableStateOf(false) }
-    var bungaChecked by rememberSaveable { mutableStateOf(false) }
+    var diraChecked by rememberSaveable { mutableStateOf(false) }
+    var radiChecked by rememberSaveable { mutableStateOf(false) }
+    var iradChecked by rememberSaveable { mutableStateOf(false) }
 
     var showResult by rememberSaveable { mutableStateOf(false) }
 
@@ -154,16 +154,16 @@ fun ScreenContent(modifier: Modifier = Modifier) {
 
         Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Checkbox(checked = wafiqChecked, onCheckedChange = { wafiqChecked = it })
-                Text(text = stringResource(R.string.wafiq), modifier = Modifier.padding(start = 8.dp))
+                Checkbox(checked = diraChecked, onCheckedChange = { diraChecked = it })
+                Text(text = stringResource(R.string.dira), modifier = Modifier.padding(start = 8.dp))
             }
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Checkbox(checked = zhafiraChecked, onCheckedChange = { zhafiraChecked = it })
-                Text(text = stringResource(R.string.zhafira), modifier = Modifier.padding(start = 8.dp))
+                Checkbox(checked = radiChecked, onCheckedChange = { radiChecked = it })
+                Text(text = stringResource(R.string.radi), modifier = Modifier.padding(start = 8.dp))
             }
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Checkbox(checked = bungaChecked, onCheckedChange = { bungaChecked = it })
-                Text(text = stringResource(R.string.bunga), modifier = Modifier.padding(start = 8.dp))
+                Checkbox(checked = iradChecked, onCheckedChange = { iradChecked = it })
+                Text(text = stringResource(R.string.irad), modifier = Modifier.padding(start = 8.dp))
             }
         }
 
@@ -186,7 +186,7 @@ fun ScreenContent(modifier: Modifier = Modifier) {
                 hariTanggalError = hariTanggal.isBlank()
                 namaTempatError = namaTempat.isBlank()
                 totalHargaError = totalHarga.isBlank()
-                checkBoxError = !(wafiqChecked || zhafiraChecked || bungaChecked)
+                checkBoxError = !(diraChecked || radiChecked || iradChecked)
 
                 showResult = !(hariTanggalError || namaTempatError || totalHargaError || checkBoxError)
             },
@@ -206,9 +206,9 @@ fun ScreenContent(modifier: Modifier = Modifier) {
             Text("${stringResource(R.string.output_total)} Rp $totalHarga")
 
             val selectedNames = listOfNotNull(
-                if (wafiqChecked) stringResource(R.string.wafiq) else null,
-                if (zhafiraChecked) stringResource(R.string.zhafira) else null,
-                if (bungaChecked) stringResource(R.string.bunga) else null
+                if (diraChecked) stringResource(R.string.dira) else null,
+                if (radiChecked) stringResource(R.string.radi) else null,
+                if (iradChecked) stringResource(R.string.irad) else null
             )
 
             val jumlahOrang = selectedNames.size
@@ -234,9 +234,9 @@ fun ScreenContent(modifier: Modifier = Modifier) {
                         hariTanggal = ""
                         namaTempat = ""
                         totalHarga = ""
-                        wafiqChecked = false
-                        zhafiraChecked = false
-                        bungaChecked = false
+                        diraChecked = false
+                        radiChecked = false
+                        iradChecked = false
                         showResult = false
                         hariTanggalError = false
                         namaTempatError = false

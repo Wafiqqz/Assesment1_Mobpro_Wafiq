@@ -6,9 +6,9 @@
     <string name="aktivitas">Today\'s Activity</string>
     <string name="hasil">Result</string>
     <string name="yang_bayar">Who pays?</string>
-    <string name="wafiq" translatable="false">Wafiq</string>
-    <string name="zhafira" translatable="false">Zhafira</string>
-    <string name="bunga" translatable="false">Bunga</string>
+    <string name="dira" translatable="false">Dira</string>
+    <string name="radi" translatable="false">Radi</string>
+    <string name="irad" translatable="false">Irad</string>
     <string name="bayar">The payer is</string>
     <string name="rekap_hasil">Today\'s Activity Recap Results</string>
     <string name="output_tempat">Place\'s name:</string>
